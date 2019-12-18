@@ -103,10 +103,10 @@ function dateInit() {
     // accumulatedSeconds += 60 * (60 * (h - 14) + minutes) + s;
     // 안녕 잘가..
 
-    // 전역은 2020년 9월 16일 오후 2시로 가정하고 초 단위로 계산함.
+    // 전역은 2020년 9월 16일 오전 8시로 가정하고 초 단위로 계산함.
     satisfaction.innerText = `입대후 지난 시간 : ${accumulatedSeconds}초\
     \n(${elapsed_days}일 ${elapsed_hours}시간 ${elapsed_minutes}분 ${elapsed_seconds}초)\
-    \n\n할당률 : ${(accumulatedSeconds / 50371200) * 100}%`
+    \n\n할당률 : ${(accumulatedSeconds / 50241600) * 100}%`
 }
 
 
@@ -121,7 +121,7 @@ function dateInit2() {
   const now_sec = now.getSeconds();
 
   const start = new Date(2019, 1, 11, 14, 0 ,0);
-  const end = new Date(2020, 8, 16, 14, 0, 0); /* 전역 2020년 9월 16일 14시 */
+  const end = new Date(2020, 8, 16, 8, 0, 0); /* 전역 2020년 9월 16일 08시 */
 
   const dif = now - start; /* 입대부터 지금까지 지난 시간을 밀리세컨드로 */
 
