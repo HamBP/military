@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ko">
 
-  <head>
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="utf-8">
-    <title>전역만을 기다린다</title>
-    <!--<link rel="stylesheet" href="index.css">-->
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+        <title>algosket의 군 생활 </title>
+    </head>
 
-  <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
-      <h2>2019년 2월 11일 오후 2시 입대</h2>
-      <h2>2020년 9월 16일 전역</h2>
-      <h3>할당률</h3>
-    </div>
-    <script src="clock.js"></script>
-  </body>
+    <body>
+        <center>
+            
+            <h1>algosketch의 슬기로운 군생활</h1>
+
+            <strong>
+                2019년 2월 11일 14시 입대
+            </strong>
+            </br>
+            <strong>
+                2020년 9월 16일 08시 전역
+            </strong>
+            
+            <h2>할당률</h2>
+
+            <strong id="percent">
+                00%
+            </strong>
+
+            <table id="percent-bar">
+                <tr> <!-- td * 25-->
+                    <td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+            
+            
+        </center>
+    
+        <script src="main.js"></script>
+    </body>
 
 </html>
