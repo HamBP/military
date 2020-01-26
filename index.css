@@ -1,5 +1,14 @@
-#percent-bar td {
+* {
+    margin: 5px;
+}
+
+#percent-bar {
     border: solid 1px;
-    width: 5px;
-    height: 5px;
+    border-collapse: collapse;
+}
+
+#percent-bar td {
+    width: 4px;
+    height: 8px;
+    background-color: #00FF00;
 }
