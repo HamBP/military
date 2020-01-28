@@ -1,25 +1,31 @@
 $(document).ready(function() {
     var inArmy = new Date(2019, 1, 11, 14, 0, 0);
     var outArmy = new Date(2020, 8, 16, 8, 0, 0);
-    var curTime = new Date();
 
     var goalPeriod = outArmy - inArmy;
-    var curPeriod = curTime - inArmy;
+    var curPeriod = (new Date()) - inArmy;
 
     var percentage = 100 * (curPeriod / goalPeriod);
 
-    $(percent).html(percentage.toString());
-
-    $(re-calculate).on("click", function (e) {
-        percentage = 100 * (curPeriod / goalPeriod);
-        $(percent).html(percentage.toString());
-    })
-
-    $(percent-bar).each(function (i) {
-        if(i < 10) {
-            $(this).css("background-color", "green");
+    // 초기 값
+    $(percent).html(percentage.toFixed());
+    $("#percent-bar td").each(function (i) {
+        if((i+1) < percentage) {
+            $(this).css("background-color", "#00FF00");
         }
     })
 
-    console.log("아무말");
+    // 재계산
+    $("#re-calculate").on("click", function (e) {
+        curPeriod = (new Date()) - inArmy;
+        percentage = 100 * (curPeriod / goalPeriod);
+        $(percent).html(percentage.toFixed(6));
+
+        $("#percent-bar td").each(function (i) {
+            if((i+1) < percentage) {
+                $(this).css("background-color", "#00FF00");
+            }
+        })
+    })
+
 })
