@@ -8,7 +8,7 @@ $(document).ready(function() {
     var percentage = 100 * (curPeriod / goalPeriod);
 
     // 초기 값
-    $(percent).html(percentage.toFixed());
+    $(percent).html(percentage.toFixed(6));
     $("#percent-bar td").each(function (i) {
         if((i+1) < percentage) {
             $(this).css("background-color", "#00FF00");
