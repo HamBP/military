@@ -8,20 +8,20 @@ $(document).ready(function() {
     var percentage = 100 * (curPeriod / goalPeriod);
 
     // 초기 값
-    $(percent).html(percentage.toFixed(6));
-    $("#percent-bar td").each(function (i) {
+    $(percent).html(percentage.toFixed(6) + '%');
+    $("#percent_bar td").each(function (i) {
         if((i+1) < percentage) {
             $(this).css("background-color", "#00FF00");
         }
     })
 
     // 재계산
-    $("#re-calculate").on("click", function (e) {
+    $("#re_calculate").on("click", function (e) {
         curPeriod = (new Date()) - inArmy;
         percentage = 100 * (curPeriod / goalPeriod);
-        $(percent).html(percentage.toFixed(6));
+        $(percent).html(percentage.toFixed(6) + '%');
 
-        $("#percent-bar td").each(function (i) {
+        $("#percent_bar td").each(function (i) {
             if((i+1) < percentage) {
                 $(this).css("background-color", "#00FF00");
             }

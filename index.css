@@ -6,17 +6,42 @@ h1 {
     height: 120px;
 }
 
-#percent-bar {
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.date-info {
+    margin: 20px;
+    display: block;
+    width: 600px;
+    height: 50px;
+    text-align: left;
+}
+
+.percent-area {
+    width: 600px;
+    height: 160px;
+    margin: 10px;
+    padding: 10px;
+    background-color: aqua;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: #88FFFF;
+}
+
+#percent_bar {
     border: solid 1px;
     border-collapse: collapse;
 }
 
-#percent-bar td {
+#percent_bar td {
     width: 4px;
     height: 8px;
 }
 
-#re-calculate {
+#re_calculate {
+    margin: 20px;
     width : 72px;
     height : 24px;
     font-size: 16px;
@@ -25,6 +50,6 @@ h1 {
     background: linear-gradient(to right, #ff7db7, #ff0072);
 }
 
-#re-calculate:hover {
+#re_calculate:hover {
     box-shadow: 2px 2px gray;
 }
